@@ -10,3 +10,8 @@ img {
     font-family: 'Kalam';
     font-size: 30px;
 }
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+  }
