@@ -1,0 +1,12 @@
+img {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.logo {
+    font-family: 'Kalam';
+    font-size: 30px;
+}
