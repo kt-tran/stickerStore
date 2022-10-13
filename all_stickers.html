@@ -1,49 +1,231 @@
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <div class="card" style="width: 20rem;">
-                <a href="/sticker_listing.html" class="text-decoration-none text-reset">
-                    <img src="/images/stickers/space_cat.png" class="card-img-top"
-                        alt="sticker depicting purple cat as planet with sparkles surrounding it">
-                    <div class="card-body">
-                        <h5 class="card-title">Sparkle Space Cat</h5>
-                        <p class="card-text pb-3">$0.99</p>
-                        <div class="d-flex justify-content-center">
-                            <a href="#" class="btn btn-primary float-right"
-                                style="background-color: #CA8D89; border:#CA8D89">More animals</a>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+    <!-- KalamFont for logo -->
+    <link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
+
+    <!-- font for navbar-->
+    <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
+
+    <title>Simply Stickers</title>
+
+    <!-- Favicon in tab-->
+    <link rel="icon" type="image/x-icon" href="/images/heart-fill.svg">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #E3D6D2">
+            <a class="navbar-brand logo pr-2" href="index.html">Simply Stickers</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse font-weight-normal" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown"
+                            aria-expanded="false">
+                            Categories
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/all_stickers.html">Browse All</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Animals</a>
+                            <a class="dropdown-item" href="/cat_flowers.html">Flowers</a>
+                            <a class="dropdown-item" href="#">Food + Drinks</a>
+                            <a class="dropdown-item" href="#">Text</a>
                         </div>
-                    </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/all_artists.html">Artists</a>
+                    </li>
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="try 'cute penguin'"
+                        aria-label="Search">
+                    <button class="btn my-2 my-sm-0" type="submit"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 15 15">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </button>
+                </form>
+                <button class="btn ml-1 my-2 my-sm-0" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                      </svg>
+                </button>
             </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="container my-5 text-center">
+            <h1>All Stickers</h1>
         </div>
-        <div class="col">
-            <div class="card" style="width: 20rem;">
-                <a href="/sticker_listing.html" class="text-decoration-none text-reset">
-                    <img src="/images/stickers/chocolate_cake.png" class="card-img-top"
-                        alt="circular small chocolate cake with single candle on top">
-                    <div class="card-body">
-                        <h5 class="card-title">Mini Chocolate Cake</h5>
-                        <p class="card-text pb-3">$0.50</p>
-                        <div class="d-flex justify-content-center">
-                            <a href="#" class="btn btn-primary float-right"
-                                style="background-color: #CA8D89; border:#CA8D89">More food</a>
-                        </div>
+
+        <div class="container mb-5">
+            <div class="row mb-5">
+                <div class="col">
+                    <div class="card" style="width: 20rem;">
+                        <a href="/sticker_listing.html" class="text-decoration-none text-reset">
+                            <img src="/images/stickers/space_cat.png" class="card-img-top"
+                                alt="sticker depicting purple cat as planet with sparkles surrounding it">
+                            <div class="card-body">
+                                <h5 class="card-title">Sparkle Space Cat</h5>
+                                <p class="card-text pb-3">$0.99</p>
+                            </div>
                     </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 20rem;">
-                <a href="/sticker_listing.html" class="text-decoration-none text-reset">
-                    <img src="/images/stickers/flower_vase.png" class="card-img-top"
-                        alt="brown glass vase with four pink flowers inside">
-                    <div class="card-body">
-                        <h5 class="card-title">Feminine Flower Vase</h5>
-                        <p class="card-text pb-3">$1.99</p>
-                        <div class="d-flex justify-content-center">
-                            <a href="/cat_flowers.html" class="btn btn-primary float-right"
-                                style="background-color: #CA8D89; border:#CA8D89">More flowers</a>
-                        </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 20rem;">
+                        <a href="/sticker_listing.html" class="text-decoration-none text-reset">
+                            <img src="/images/stickers/chocolate_cake.png" class="card-img-top"
+                                alt="circular small chocolate cake with single candle on top">
+                            <div class="card-body">
+                                <h5 class="card-title">Mini Chocolate Cake</h5>
+                                <p class="card-text pb-3">$0.50</p>
+                            </div>
                     </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 20rem;">
+                        <a href="/sticker_listing.html" class="text-decoration-none text-reset">
+                            <img src="/images/stickers/flower_vase.png" class="card-img-top"
+                                alt="brown glass vase with four pink flowers inside">
+                            <div class="card-body">
+                                <h5 class="card-title">Feminine Flower Vase</h5>
+                                <p class="card-text pb-3">$1.99</p>
+                            </div>
+                    </div>
+                </div>
+                
             </div>
+
+            <div class="row mb-5">
+                <div class="col">
+                    <div class="card" style="width: 20rem;">
+                        <a href="/sticker_listing.html" class="text-decoration-none text-reset">
+                            <img src="/images/stickers/bubble_tea.png" class="card-img-top"
+                                alt="sticker bubble tea drink with black pearls and ice in clear cup">
+                            <div class="card-body">
+                                <h5 class="card-title">Bubble Tea Addict</h5>
+                                <p class="card-text pb-3">$2.99</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 20rem;">
+                        <a href="/sticker_listing.html" class="text-decoration-none text-reset">
+                            <img src="/images/stickers/hand_flower.png" class="card-img-top"
+                                alt="black line drawing of a hand holding a rose">
+                            <div class="card-body">
+                                <h5 class="card-title">Line Rose</h5>
+                                <p class="card-text pb-3">$0.50</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 20rem;">
+                        <a href="/sticker_listing.html" class="text-decoration-none text-reset">
+                            <img src="/images/stickers/do_it_text.png" class="card-img-top"
+                                alt="black text with white outline spelling the words 'do it'">
+                            <div class="card-body">
+                                <h5 class="card-title">Motivational Diary Text</h5>
+                                <p class="card-text pb-3">$0.30</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="card" style="width: 20rem;">
+                        <a href="/sticker_listing.html" class="text-decoration-none text-reset">
+                            <img src="/images/stickers/strawberry_cake.png" class="card-img-top"
+                                alt="circular small vanilla cake with pink icing and a single strawberry on top">
+                            <div class="card-body">
+                                <h5 class="card-title">Mini Strawberry Cake</h5>
+                                <p class="card-text pb-3">$0.50</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 20rem;">
+                        <a href="/sticker_listing.html" class="text-decoration-none text-reset">
+                            <img src="/images/stickers/daisy.png" class="card-img-top"
+                                alt="Drawn white daisy">
+                            <div class="card-body">
+                                <h5 class="card-title">White Daisy</h5>
+                                <p class="card-text pb-3">$0.40</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 20rem;">
+                        <a href="/sticker_listing.html" class="text-decoration-none text-reset">
+                            <img src="/images/stickers/penguin.png" class="card-img-top"
+                                alt="penguin in red sweater reads a blue book while sitting in a brown chair">
+                            <div class="card-body">
+                                <h5 class="card-title">Cosy Penguin Reading</h5>
+                                <p class="card-text pb-3">$2.99</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </div>
-</div>
+
+    </main>
+    <!--TODO: fix navbar + footer clash. Cannot click on hyperlinks in footer due to navbar layer on top-->
+    <footer class="text-center text-white" style="background-color: #605b5a;">
+        <!-- Grid container -->
+        <div class="container p-4 logo">
+            <a class="text-white text-decoration-none" href="/index.html"">Simply Stickers</a>
+        </div>
+
+        <!-- help buttons -->
+        <div class="text-center p-3" style="background-color: #605b5a;">
+            <a class="text-white" href="/contact.html">Contact</a> |
+            <a class="text-white" href="#"">FAQ</a> |
+          <a class=" text-white" href="#">Policy</a>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
