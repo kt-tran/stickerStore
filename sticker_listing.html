@@ -39,8 +39,7 @@
             <div class="collapse navbar-collapse font-weight-normal" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown"
-                            aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false">
                             Categories
                         </a>
                         <div class="dropdown-menu">
@@ -58,71 +57,167 @@
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="try 'cute penguin'"
                         aria-label="Search">
-                    <button class="btn my-2 my-sm-0" type="submit"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-search" viewBox="0 0 15 15">
+                    <button class="btn my-2 my-sm-0" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 15 15">
                             <path
                                 d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                         </svg>
                     </button>
                 </form>
                 <button class="btn ml-1 my-2 my-sm-0" type="submit">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                      </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-cart" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                    </svg>
                 </button>
             </div>
         </nav>
 
     </header>
 
-    <div class="container-fluid mx-5 px-5">
+    <div class="container-fluid px-5">
         <!-- Stack the columns on mobile by making one full-width and the other half-width -->
         <div class="row">
             <div class="col-lg-4 col-md-7">
-                <img src="/images/stickers/space_cat.png" class="card-img-top" alt="sticker depicting purple cat as planet with sparkles surrounding it">
+                <img src="/images/stickers/space_cat.png" class="card-img-top"
+                    alt="sticker depicting purple cat as planet with sparkles surrounding it">
             </div>
 
             <div class="col-lg-6 col-md-5 mt-5">
-                <h2> 
-                    Sparkle Space Cat
-                </h2>
-                <h4>
-                    $0.99
-                </h4>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <h1>Sparkle Space Cat</h1>
+                            <h4>
+                                $0.99
+                                <form class="form-inline float-right">
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="input1" placeholder="1"
+                                            style="width:65px">
+                                        <button type="button" class="btn btn-secondary">Add To Cart</button>
+                                    </div>
+                                </form>
+                            </h4>
+                        </div>
+                    </div>
 
-                <p>
-                    Artist: NyanBeatz <br>
-                    This funky cat sticker would be the perfect addition to your notebook, laptop or moodboard. size, themes, matte vs shiny, puffy vs flat
+                    <div class="row">
+                        <div class="col">
+                            <h5>Artist: NyanBeatz</h5>
+                            This funky cat sticker is the perfect addition to your notebook, laptop or moodboard. <br>
+                        </div>
+                    </div>
 
-                    <button type="button" class="btn btn-secondary">Add to cart</button>
-                </p>
+                    <div class="row">
+                        <div class="col mt-3">
+                            Suitable for:
+                            <ul>
+                                <li>Paper</li>
+                                <li>Plastic</li>
+                                <li>Metal</li>
+                            </ul>
+                            <table class="table table-bordered mt-5">
+                                <thead style="background-color:#c6bbb8">
+                                    <tr>
+                                        <th colspan="2" scope="col" class="font-weight-normal"
+                                            style="font-family:Kalam; font-size:larger">Details</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Size (cm)</th>
+                                        <td>3x6</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Gloss</th>
+                                        <td>No - matte</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Puffy</th>
+                                        <td>No</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Puffy</th>
+                                        <td>No</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Puffy</th>
+                                        <td>No</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                    <div class="row my-3">
+                        <div class="col">
+                            <h5> Please note:</h5>
+                            <p>Do not place items decorated with stickers in a dishwater, oven, or microwave. <br>
+                                Do not place stickers at the bottom or inside a bathtub. <br>
+                                Stickers may not perform well on brick, cinder block or any other porous surfaces. <br>
+                                Prevent placing stickers on rugs, fabrics, clothing, or any other textile as textile
+                                fibres may damage the adhesive and make it ineffective. <br>
+                                Since very high and low temperatures can compromise the adhesive and cause stickers to
+                                peel, rip, fall off, or damage the surfaces, it is highly advisable to not place
+                                stickers in areas where they will be exposed to extreme heat or cold. <br>
+                            </p>
+
+                            <div class="text-center">
+                                <img src="/images/2070.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="col-lg-2 mt-5">
-                <div class="card-body">
-                    <h5 class="card-title">Like NyanBeatz's style?</h5>
-                    <p class="card-text">Check out more of their stickers!</p>
-                    <a href="#" class="btn btn-primary">See more</a>
-                  </div>
-
-                  <div class="card-body">
-                    <h5 class="card-title">Enjoy animal stickers?</h5>
-                    <a href="#" class="btn btn-primary">See more</a>
-                  </div>
-
+                <div class="card text-center mt-2">
+                    <div class="card-body">
+                        <h5 class="card-title">Like NyanBeatz's style?</h5>
+                        <p class="card-text">Check out more of their stickers!</p>
+                        <a href="#" class="btn btn-primary"
+                            style="background-color: #CA8D89; border-color: #CA8D89;">See more</a>
+                    </div>
                 </div>
-          
+
+                <div class="card text-center mt-5">
+                    <div class="card-body">
+                        <h5 class="card-title">Enjoy animal stickers?</h5>
+                        <a href="#" class="btn btn-primary"
+                            style="background-color: #CA8D89; border-color: #CA8D89;">See more</a>
+                    </div>
+                </div>
+
+                <div class="card text-center mt-5">
+                    <div class="card-body">
+                        <h5 class="card-title">Not quite what you wanted?</h5>
+                        <p class="card-text">Contact the artist to request a custom order!</p>
+                        <a href="#" class="btn btn-primary" style="background-color: #CA8D89; border-color: #CA8D89;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-send" viewBox="0 0 16 16">
+                                <path
+                                    d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-      
-    <footer class="navbar-nav text-center text-white" style="background-color: #605b5a;">
+
+
+    <footer class="text-center text-white" style="background-color: #605b5a;">
         <!-- Grid container -->
-        <div class="container p-4 logo">Simply Stickers</div>
+        <div class="container p-4 logo">
+            <a class="text-white text-decoration-none" href="/index.html"">Simply Stickers</a>
+        </div>
+
         <!-- help buttons -->
-        <div class="text-center p-3" style="background-color: #605b5a;">
-            <a class="text-white" href="/contact.html">Contact</a> |
-            <a class="text-white" href="#"">FAQ</a> |
+        <div class=" text-center p-3" style="background-color: #605b5a;">
+                <a class="text-white" href="/contact.html">Contact</a> |
+                <a class="text-white" href="#"">FAQ</a> |
           <a class=" text-white" href="#">Policy</a>
         </div>
     </footer>
