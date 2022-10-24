@@ -8,7 +8,7 @@
 <div class="container my-5">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner" role="listbox">
-
+            <!-- first slide-->
             <div class="carousel-item active">
                 <a href={{ url_for('main.artists') }}>
                     <img src={{url_for('static', filename='images/artist.jpg' )}} class="d-block w-100" alt="An open book laid on a white background with a dried bouquet of roses, pens, 
@@ -19,6 +19,7 @@
                     </div>
             </div>
 
+            <!-- second slide-->
             <div class="carousel-item">
                 <a href={{ url_for('main.flowers') }}>
                     <img class="d-block w-100" src={{url_for('static', filename='images/rose_splash.jpg' )}}
@@ -28,6 +29,7 @@
                     </div>
             </div>
 
+            <!-- third slide-->
             <div class="carousel-item">
                 <a href="{{ url_for('main.all_stickers') }}">
                     <img class="d-block w-100" src={{url_for('static', filename='images/pink_splash.jpg' )}}
@@ -51,7 +53,7 @@
     </div>
 </div>
 
-<!-- best sellers-->
+<!-- best sellers (top 3 displayed in cards) -->
 <div class="container mb-3">
     <h3><img src="{{url_for('static', filename='images/fire_1f525.png')}}" style="height:30px;" class="pb-2">
         Our hottest stickers this week
@@ -124,7 +126,7 @@
 {% endblock %}
 
 {% block modal %}
-<!-- Modal -->
+<!-- Welcome Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">

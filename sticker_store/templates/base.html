@@ -28,13 +28,16 @@
 
 <body>
     <header>
+        <!-- nav bar-->
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #E3D6D2">
+            <!-- stylised logo -->
             <a class="navbar-brand logo pr-2" href={{url_for('main.index')}}>Simply Stickers</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
+            <!-- drop down menu-->
             <div class="collapse navbar-collapse font-weight-normal" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item dropdown">
@@ -55,6 +58,7 @@
                     </li>
                 </ul>
 
+                <!-- search bar-->
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="try 'cute penguin'"
                         aria-label="Search">
@@ -65,6 +69,8 @@
                         </svg>
                     </button>
                 </form>
+
+                <!-- cart button -->
                 <button class="btn ml-1 my-2 my-sm-0" type="submit">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                         class="bi bi-cart" viewBox="0 0 16 16">
@@ -74,10 +80,14 @@
                 </button>
             </div>
         </nav>
+        
+        <!-- child content for head-->
         {% block head %}{% endblock %}
+
     </header>
 
     <main>
+        <!-- child content for main-->
         {% block main %}{% endblock %}
     </main>
 
@@ -95,9 +105,11 @@
           <a class=" text-white" href="#">Policy</a>
         </div>
 
+        <!-- child content for footer to allow for modal-->
         {% block footer %}{% endblock %}
     </footer>
 
+    <!-- child content for footer to allow for modal-->
     {% block modal %}{% endblock %}
 
     <!-- Optional JavaScript; choose one of the two! -->

@@ -1,4 +1,4 @@
-from StickerStore import create_app
+from sticker_store import create_app
 
 if __name__=='__main__':
     napp=create_app()
