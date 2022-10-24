@@ -19,6 +19,10 @@ def sticker_listing():
 def flowers():
     return render_template('cat_flowers.html')
 
+@bp.route('/animals/')
+def animals():
+    return render_template('cat_animals.html')
+
 @bp.route('/all_stickers/')
 def all_stickers():
     return render_template('all_stickers.html')
