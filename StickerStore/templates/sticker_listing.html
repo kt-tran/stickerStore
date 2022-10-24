@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block main %}
+<div class="container-fluid px-5">
+    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+    <div class="row">
+        <div class="col-lg-4 col-md-7">
+            <img src={{url_for('static', filename='images/stickers/space_cat.png')}} class="card-img-top"
+                alt="sticker depicting purple cat as planet with sparkles surrounding it">
+        </div>
+
+        <div class="col-lg-6 col-md-5 mt-5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <h1>Sparkle Space Cat</h1>
+                        <h4>
+                            $0.99
+                            <form class="form-inline float-right">
+                                <div class="input-group">
+                                    <input type="number" class="form-control" id="input1" placeholder="1"
+                                        style="width:65px">
+                                    <button type="button" class="btn btn-secondary">Add To Cart</button>
+                                </div>
+                            </form>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <h5>Artist: NyanBeatz</h5>
+                        This funky cat sticker is the perfect addition to your notebook, laptop or moodboard. <br>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col mt-3">
+                        Suitable for:
+                        <ul>
+                            <li>Paper</li>
+                            <li>Plastic</li>
+                            <li>Metal</li>
+                        </ul>
+                        <table class="table table-bordered mt-5">
+                            <thead style="background-color:#c6bbb8">
+                                <tr>
+                                    <th colspan="2" scope="col" class="font-weight-normal"
+                                        style="font-family:Kalam; font-size:larger">Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Size (cm)</th>
+                                    <td>3 x 6</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Gloss</th>
+                                    <td>No</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Matte</th>
+                                    <td>Yes</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Holographic</th>
+                                    <td>Yes</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Puffy</th>
+                                    <td>No</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+                <div class="row my-3">
+                    <div class="col">
+                        <h5> Please note:</h5>
+                        <p>Do not place items decorated with stickers in a dishwater, oven, or microwave. <br>
+                            Do not place stickers at the bottom or inside a bathtub. <br>
+                            Stickers may not perform well on brick, cinder block or any other porous surfaces. <br>
+                            Prevent placing stickers on rugs, fabrics, clothing, or any other textile as textile
+                            fibres may damage the adhesive and make it ineffective. <br>
+                            Since very high and low temperatures can compromise the adhesive and cause stickers to
+                            peel, rip, fall off, or damage the surfaces, it is highly advisable to not place
+                            stickers in areas where they will be exposed to extreme heat or cold. <br>
+                        </p>
+
+                        <div class="text-center">
+                            <img src={{url_for('static', filename='images/2070.jpg')}}>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2 mt-5">
+            <div class="card text-center mt-2">
+                <div class="card-body">
+                    <h5 class="card-title">Like NyanBeatz's style?</h5>
+                    <p class="card-text">Check out more of their stickers!</p>
+                    <a href="#" class="btn btn-primary"
+                        style="background-color: #CA8D89; border-color: #CA8D89;">See more</a>
+                </div>
+            </div>
+
+            <div class="card text-center mt-5">
+                <div class="card-body">
+                    <h5 class="card-title">Enjoy animal stickers?</h5>
+                    <a href="#" class="btn btn-primary"
+                        style="background-color: #CA8D89; border-color: #CA8D89;">See more</a>
+                </div>
+            </div>
+
+            <div class="card text-center mt-5">
+                <div class="card-body">
+                    <h5 class="card-title">Not quite what you wanted?</h5>
+                    <p class="card-text">Contact the artist to request a custom order!</p>
+                    <a href="#" class="btn btn-primary" style="background-color: #CA8D89; border-color: #CA8D89;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-send" viewBox="0 0 16 16">
+                            <path
+                                d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

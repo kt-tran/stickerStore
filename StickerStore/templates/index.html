@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block main %}
+<!-- CAROUSEL -->
+<div class="container my-5">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+
+            <div class="carousel-item active">
+                <a href={{ url_for('main.artists') }}>
+                    <img src={{url_for('static', filename='images/artist.jpg' )}} class="d-block w-100" alt="An open book laid on a white background with a dried bouquet of roses, pens, 
+                        polaroid photographs and twine strewn about. A watercolour palette lays nearby."
+                        style="width: 100px; height: 450px;">
+                    <div class="carousel-caption d-flex flex-column justify-content-center h-100" style="top: 0">
+                        <h1>Artists</h1>
+                    </div>
+            </div>
+
+            <div class="carousel-item">
+                <a href={{ url_for('main.flowers') }}>
+                    <img class="d-block w-100" src={{url_for('static', filename='images/rose_splash.jpg' )}}
+                        alt="a bouquet of pink roses" style="width: 100px; height: 450px;">
+                    <div class="carousel-caption d-flex flex-column justify-content-center h-100" style="top: 0">
+                        <h1>Flowers</h1>
+                    </div>
+            </div>
+
+            <div class="carousel-item">
+                <a href="{{ url_for('main.all_stickers') }}">
+                    <img class="d-block w-100" src={{url_for('static', filename='images/pink_splash.jpg' )}}
+                        alt="cloudy pink sky with small moon in corner" style="width: 100px; height: 450px;">
+                    <div class="carousel-caption d-flex flex-column justify-content-center h-100" style="top: 0">
+                        <h1>Browse</h1>
+                    </div>
+            </div>
+
+        </div>
+
+        <!-- buttons -->
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<!-- best sellers-->
+<div class="container mb-3">
+    <h3><img src="{{url_for('static', filename='images/fire_1f525.png')}}" style="height:30px;" class="pb-2">
+        Our hottest stickers this week
+        <img src="{{url_for('static', filename='images/fire_1f525.png')}}" style="height:30px;" class="pb-2">
+    </h3>
+</div>
+<div class="container mb-5">
+    <div class="row">
+        <div class="col col-md-4 col-lg-4">
+            <div class="card" style="width: 20rem;">
+                <a href={{ url_for('main.sticker_listing') }} class="text-decoration-none text-reset">
+                    <img src={{url_for('static', filename='images/stickers/space_cat.png' )}} class="card-img-top"
+                        alt="sticker depicting purple cat as planet with sparkles surrounding it">
+                    <div class="card-body">
+                        <h5 class="card-title">Sparkle Space Cat</h5>
+                        <p class="card-text pb-3">$0.99</p>
+                        <div class="d-flex justify-content-center">
+                            <a href="#" class="btn btn-primary float-right"
+                                style="background-color: #CA8D89; border:#CA8D89">More animals</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="col col-md-4 col-lg-4">
+            <div class="card" style="width: 20rem;">
+                <a href={{ url_for('main.sticker_listing') }} class="text-decoration-none text-reset">
+                    <img src={{url_for('static', filename='images/stickers/chocolate_cake.png' )}} class="card-img-top"
+                        alt="circular small chocolate cake with single candle on top">
+                    <div class="card-body">
+                        <h5 class="card-title">Mini Chocolate Cake</h5>
+                        <p class="card-text pb-3">$0.50</p>
+                        <div class="d-flex justify-content-center">
+                            <a href="#" class="btn btn-primary float-right"
+                                style="background-color: #CA8D89; border:#CA8D89">More food</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="col col-md-4 col-lg-4">
+            <div class="card" style="width: 20rem;">
+                <a href={{ url_for('main.sticker_listing') }} class="text-decoration-none text-reset">
+                    <img src={{url_for('static', filename='images/stickers/flower_vase.png' )}} class="card-img-top"
+                        alt="brown glass vase with four pink flowers inside">
+                    <div class="card-body">
+                        <h5 class="card-title">Feminine Flower Vase</h5>
+                        <p class="card-text pb-3">$1.99</p>
+                        <div class="d-flex justify-content-center">
+                            <a href="cat_flowers.html" class="btn btn-primary float-right"
+                                style="background-color: #CA8D89; border:#CA8D89">More flowers</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+<!--TODO: fix navbar + footer clash. Cannot click on hyperlinks in footer due to navbar layer on top-->
+{% block footer %}
+<nav class="navbar-nav fixed-bottom ml-auto">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="" data-target="#exampleModal" data-toggle="modal">
+                <img src="{{url_for('static', filename='images/greeting_bunny.gif')}}" style="float:right;"
+                    class="w-25">
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block modal %}
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h5 class="modal-title w-100" id="exampleModalLabel">✨ Welcome to Simply Stickers! ✨</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Our stickers are perfect for gifts, decorating notebooks, personalizing your laptop and for
+                collecting :)
+                <p style="text-align:end">Enjoy!</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

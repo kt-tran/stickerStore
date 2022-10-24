@@ -1,0 +1,121 @@
+
+{% extends 'base.html' %}
+
+{% block head %}
+    <div class="container my-5 text-center">
+            <h1>All Stickers</h1>
+        </div>
+{% endblock %}
+
+{% block main %}
+    <div class="container mb-5">
+            <div class="row mb-5">
+                <div class="col col-lg-4">
+                    <div class="card" style="width: 20rem;">
+                        <a href={{ url_for('main.sticker_listing') }} class="text-decoration-none text-reset">
+                            <img src={{url_for('static', filename='images/stickers/space_cat.png')}} class="card-img-top"
+                                alt="sticker depicting purple cat as planet with sparkles surrounding it">
+                            <div class="card-body">
+                                <h5 class="card-title">Sparkle Space Cat</h5>
+                                <p class="card-text pb-3">$0.99</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-lg-4">
+                    <div class="card" style="width: 20rem;">
+                        <a href={{ url_for('main.sticker_listing') }} class="text-decoration-none text-reset">
+                            <img src={{url_for('static', filename='images/stickers/chocolate_cake.png')}} class="card-img-top"
+                                alt="circular small chocolate cake with single candle on top">
+                            <div class="card-body">
+                                <h5 class="card-title">Mini Chocolate Cake</h5>
+                                <p class="card-text pb-3">$0.50</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-lg-4">
+                    <div class="card" style="width: 20rem;">
+                        <a href={{ url_for('main.sticker_listing') }} class="text-decoration-none text-reset">
+                            <img src={{url_for('static', filename='images/stickers/flower_vase.png')}} class="card-img-top"
+                                alt="brown glass vase with four pink flowers inside">
+                            <div class="card-body">
+                                <h5 class="card-title">Feminine Flower Vase</h5>
+                                <p class="card-text pb-3">$1.99</p>
+                            </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row mb-5">
+                <div class="col col-lg-4">
+                    <div class="card" style="width: 20rem;">
+                        <a href={{ url_for('main.sticker_listing') }} class="text-decoration-none text-reset">
+                            <img src="{{url_for('static', filename='images/stickers/bubble_tea.png')}}" class="card-img-top"
+                                alt="sticker bubble tea drink with black pearls and ice in clear cup">
+                            <div class="card-body">
+                                <h5 class="card-title">Bubble Tea Addict</h5>
+                                <p class="card-text pb-3">$2.99</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-lg-4">
+                    <div class="card" style="width: 20rem;">
+                        <a href={{ url_for('main.sticker_listing') }} class="text-decoration-none text-reset">
+                            <img src="{{url_for('static', filename='images/stickers/hand_flower.png')}}" class="card-img-top"
+                                alt="black line drawing of a hand holding a rose">
+                            <div class="card-body">
+                                <h5 class="card-title">Line Rose</h5>
+                                <p class="card-text pb-3">$0.50</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-lg-4">
+                    <div class="card" style="width: 20rem;">
+                        <a href={{ url_for('main.sticker_listing') }} class="text-decoration-none text-reset">
+                            <img src="{{url_for('static', filename='images/stickers/do_it_text.png')}}" class="card-img-top"
+                                alt="black text with white outline spelling the words 'do it'">
+                            <div class="card-body">
+                                <h5 class="card-title">Motivational Diary Text</h5>
+                                <p class="card-text pb-3">$0.30</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col col-lg-4">
+                    <div class="card" style="width: 20rem;">
+                        <a href={{ url_for('main.sticker_listing') }} class="text-decoration-none text-reset">
+                            <img src="{{url_for('static', filename='images/stickers/strawberry_cake.png')}}" class="card-img-top"
+                                alt="circular small vanilla cake with pink icing and a single strawberry on top">
+                            <div class="card-body">
+                                <h5 class="card-title">Mini Strawberry Cake</h5>
+                                <p class="card-text pb-3">$0.50</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-lg-4">
+                    <div class="card" style="width: 20rem;">
+                        <a href={{ url_for('main.sticker_listing') }} class="text-decoration-none text-reset">
+                            <img src="{{url_for('static', filename='images/stickers/daisy.png')}}" class="card-img-top" alt="Drawn white daisy">
+                            <div class="card-body">
+                                <h5 class="card-title">White Daisy</h5>
+                                <p class="card-text pb-3">$0.40</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-lg-4">
+                    <div class="card" style="width: 20rem;">
+                        <a href={{ url_for('main.sticker_listing') }} class="text-decoration-none text-reset">
+                            <img src="{{url_for('static', filename='images/stickers/penguin.png')}}" class="card-img-top"
+                                alt="penguin in red sweater reads a blue book while sitting in a brown chair">
+                            <div class="card-body">
+                                <h5 class="card-title">Cosy Penguin Reading</h5>
+                                <p class="card-text pb-3">$2.99</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+{% endblock %}
