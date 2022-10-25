@@ -2,4 +2,8 @@
 
 IFN557 - Rapid Web Development
 
-Assignment 1 - eCommerce website using Bootstrap + CSS
+Assignment 1 & 2 - eCommerce website
+- Front end: Bootstrap + CSS
+- Backend: Flask, SQLAlchemy
+
+Incomplete:

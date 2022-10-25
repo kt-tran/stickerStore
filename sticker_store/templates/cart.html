@@ -1,59 +1,54 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% extends 'base.html' %}
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-
-    <title>Cart</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <form>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Email address</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+{% block main %}
+<!-- display contents of user basket -->
+<section>  
+    <div class="container">
+        <div class="row co-12 d-flex mt-2 mb-2">
+            <h3>Shopping Basket</h3>
         </div>
-        <div class="form-group">
-          <label for="exampleFormControlSelect1">Example select</label>
-          <select class="form-control" id="exampleFormControlSelect1">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlSelect2">Example multiple select</label>
-          <select multiple class="form-control" id="exampleFormControlSelect2">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">Example text area</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-      </form>
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-    -->
-  </body>
-</html>
+        <!-- each tour on seperate row -->
+        {% for tour in order.tours %}
+            <div class="row shadow-md my-row mb-3">
+                <div class="col-sm-10 card">
+                    <h5 class="card-header">{{tour.date.strftime("%d-%m-%Y")}} : {{tour.city.name}} {{tour.name}}</h5>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-2">
+                                <img class="img-thumbnail" src="{{url_for('static', filename=('img/' + tour.image))}}">
+                            </div>
+                            <div class="col-10">
+                                <!-- Item Description -->
+                                <p class="card-text">{{tour.description}}</p>   
+                            </div>  
+                        </div>                      
+                    </div>
+                </div>
+                <br><br>
+                <!-- right column has price and delete button -->
+                <div class="col-sm-2">
+                    <!-- delete item button -->
+                        <h5>{{ "$%.2f"|format(tour.price) }}</h5>
+                        <form method="POST" action="{{url_for('main.deleteorderitem')}}">
+                            <input type="hidden" id="id" name="id" value="{{tour.id}}">
+                            <input type="submit" value="Delete" class="btn btn-primary mb-3">
+                        </form> 
+                </div>
+            </div>
+        {% endfor %}
+        
+        <!-- total price and page controls -->
+        <section>
+            <div class="row co-12 d-flex">
+                <h5 class="mt-4">Quote = {{ "$%.2f"|format(totalprice) }}</h5>
+            </div>
+        
+            <div class="row co-12 d-flex mt-2 mb-4">
+                <a href= "{{ url_for('main.index', _anchor='cities_anchor') }}" class="btn btn-primary mr-4">Cities</a>
+                <a href= "#" class="btn btn-primary mr-4">Checkout</a>
+                <a href= "{{ url_for('main.deleteorder') }}" class="btn btn-primary">Empty Basket</a>
+            </div>
+        </section>
+    </div>
+</section>
+{% endblock %}

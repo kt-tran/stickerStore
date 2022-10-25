@@ -1,4 +1,6 @@
-from flask import Blueprint, render_template, request, url_for
+from flask import Blueprint, render_template, request, url_for, session
+from .models import City, Tour, Order
+from datetime import datetime
 
 bp = Blueprint('main', __name__)
 
