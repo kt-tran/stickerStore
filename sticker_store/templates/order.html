@@ -2,7 +2,7 @@
 
 {% block head %}
 <div class="container my-5 text-center">
-    <h1>Shopping Basket</h1>
+    <h1>Your Cart</h1>
 </div>
 {% endblock %}
 
@@ -13,9 +13,9 @@
     <div class="container">
         <!-- each sticker on seperate row -->
         {% for sticker in order.stickers %}
-            <div class="container shadow-md card">
-                <div class="col">
-                    <h5 class="card-header">{{sticker.name}}</h5>
+            <div class="container my-4">
+                <div class="col card">
+                    <h5 class="card-header my-2" style="background-color: #C6BBB8; border:#C6BBB8">{{sticker.name}} sticker</h5>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-2">
@@ -31,7 +31,7 @@
                                     <h5>{{ "$%.2f"|format(sticker.price) }}</h5>
                                     <form method="POST" action="{{url_for('main.deleteorderitem')}}">
                                         <input type="hidden" id="id" name="id" value="{{sticker.id}}">
-                                        <input type="submit" value="Delete" class="btn btn-primary mb-3">
+                                        <input type="submit" value="Delete" class="btn btn-primary mb-3" style="background-color: #A57665; border:#A57665">
                                     </form> 
                             </div>
                         </div>                      
@@ -39,26 +39,23 @@
                 </div>
             </div>
         {% endfor %}
-        <div class="container-fluid">
-            <div class="row shadow-md">
-                <div class="col">
-                    AHDJSHKAS
-                </div>
-                <div class="col">
-                    AHDJSHKAS
-                </div>
-            </div>
-        </div>
         <!-- total price and page controls -->
         <section>
-            <div class="row co-12 d-flex">
-                <h5 class="mt-4">Quote = {{ "$%.2f"|format(totalprice) }}</h5>
+            <div class="row d-flex">
+                <div class="col mt-4 text-center">
+                    <h4>Total = {{ "$%.2f"|format(totalprice) }}</h4>
+                </div>
             </div>
         
             <div class="row co-12 d-flex mt-2 mb-4">
-                <a href="{{ url_for('main.index', _anchor='cities_anchor') }}" class="btn btn-primary mr-4">Cities</a>
-                <a href="{{ url_for('main.checkout') }}" class="btn btn-primary mr-4">Checkout</a>
-                <a href="{{ url_for('main.deleteorder') }}" class="btn btn-primary">Empty Basket</a>
+                <div class="col">
+                    <a href="{{ url_for('main.index', _anchor='cities_anchor') }}" class="btn btn-primary mr-4" style="background-color: #CA8D89; border:#CA8D89">Continue Shopping</a>
+                    <a href="{{ url_for('main.deleteorder') }}" class="btn btn-primary" style="background-color: #A57665; border:#A57665">Empty Basket</a>
+                </div>
+                <div class="col text-right">
+                    <a href="{{ url_for('main.checkout') }}" class="btn btn-primary mr-4" style="background-color: #CA8D89; border:#CA8D89">Checkout</a>
+                </div>
+
             </div>
         </section>
     </div>

@@ -149,5 +149,5 @@ def checkout():
                 flash('Thank you! One of our awesome team members will contact you soon...')
                 return redirect(url_for('main.index'))
             except:
-                return 'There was an issue completing your order'
+                return 'There was an issue completing your order :('
     return render_template('checkout.html', form = form)
