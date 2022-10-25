@@ -1,15 +1,26 @@
 #import flask - from the package import class
 from flask import Flask, render_template
+from flask_bootstrap import Bootstrap
+from flask_sqlalchemy import SQLAlchemy
 
+db=SQLAlchemy()
 app=Flask(__name__)
 
 #create a function that creates a web application
 # a web server will run this web application
 def create_app():
+    ''' doco '''
     app.debug=True
-    
     app.secret_key='*,owZyr/G$[~|lE1l5M).N_A<Z' #randomly generated key
 
+    #set the app configuration data 
+    app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///milton.sqlite'
+
+    #initialize db with flask app
+    db.init_app(app)
+
+    bootstrap = Bootstrap(app)
+    
     #importing modules here to avoid circular references, register blueprints of routes
     from . import views
     app.register_blueprint(views.bp)
