@@ -1,11 +1,28 @@
 {% extends 'base.html' %}
 
 {% block head %}
-    <title>Artists</title>
+<div class="container my-5 text-center">
+    <h1>Our Artists</h1>
+</div>
 {% endblock %}
 
 {% block main %}
-    <h1>Artists</h1>
-    TODO: insert cards for artists
+<div class="container mb-5">
+    <div class="row mb-5">
+        {% for artist in artists%}
+        <div class="col col-lg-4 my-3">
+            <a href={{ url_for('main.sticker_listing') }} class="text-decoration-none text-reset">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{url_for('static', filename='img/'+artist.image)}}" alt="photograph of artist" style="width: 400px; height: 400px;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{artist.name}}</h5>
+                        <p class="card-text pb-3">{{artist.description}}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 
 {% endblock %}

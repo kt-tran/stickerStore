@@ -14,13 +14,15 @@ def index():
 #return all artists
 @bp.route('/artists')
 def artists():
-    return render_template('all_artists.html')
+    artists = Artist.query.all()
+    return render_template('all_artists.html', artists = artists)
 
 #see all of the stickers one artist has
 @bp.route('/stickers/<int:artistid>/')
-def artiststickers(stickerid):
-    stickers = Sticker.query.filter(sticker.artist_id == artistid)
-    return render_template('artists_stickers.html', stickers = stickers)
+def artiststickers(artistid):
+    stickers = Sticker.query.filter(Sticker.artist_id == artistid)
+    artists =  Artist.query.filter_by(id=artistid).first()
+    return render_template('artists_stickers.html', stickers = stickers, artists = artists.name)
 
 @bp.route('/space_cat/')
 def sticker_listing():

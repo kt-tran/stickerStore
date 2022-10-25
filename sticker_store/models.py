@@ -5,7 +5,7 @@ class Artist(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64), unique=True)
     description = db.Column(db.String(500), nullable=False)
-    image = db.Column(db.String(60), default = 'defaultartist.jpg')
+    image = db.Column(db.String(60))
     email = db.Column(db.String(60), nullable=False)
     stickers = db.relationship('Sticker', backref='Artist', cascade="all, delete-orphan")
 
