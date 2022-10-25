@@ -6,7 +6,7 @@ from . import db
 
 bp = Blueprint('main', __name__)
 
-
+#homepage
 @bp.route('/')
 def index():
     return render_template('index.html')
@@ -14,32 +14,41 @@ def index():
 #return all artists
 @bp.route('/artists')
 def artists():
-    artists = Artist.query.all()
+    artists = Artist.query.order_by(Artist.name).all()
     return render_template('all_artists.html', artists = artists)
 
 #see all of the stickers one artist has
-@bp.route('/stickers/<int:artistid>/')
+@bp.route('/artists/<int:artistid>/')
 def artiststickers(artistid):
     stickers = Sticker.query.filter(Sticker.artist_id == artistid)
     artists =  Artist.query.filter_by(id=artistid).first()
     return render_template('artists_stickers.html', stickers = stickers, artists = artists.name)
 
-@bp.route('/space_cat/')
+@bp.route('/sticker/1/')
 def sticker_listing():
-    return render_template('sticker_listing.html')
-
-@bp.route('/flowers/')
-def flowers():
-    return render_template('cat_flowers.html')
-
-@bp.route('/animals/')
-def animals():
-    return render_template('cat_animals.html')
+    stickers = Sticker.query.filter(Sticker.name == "Sparkle Space Cat")
+    return render_template('sticker_listing.html', stickers = stickers)
 
 @bp.route('/all_stickers/')
 def all_stickers():
     stickers = Sticker.query.all()
     return render_template('all_stickers.html', stickers = stickers)
+
+@bp.route('/flowers/')
+def flowers():
+    stickers = Sticker.query.filter(Sticker.category == "Flower")
+    return render_template('cat_flowers.html', stickers = stickers)
+
+@bp.route('/animals/')
+def animals():
+    stickers = Sticker.query.filter(Sticker.category == "Animal")
+    return render_template('cat_animals.html', stickers = stickers)
+
+@bp.route('/food_drink/')
+def food_drink():
+    stickers = Sticker.query.filter(Sticker.category == "Food_Or_Drink")
+    return render_template('cat_food_drink.html', stickers = stickers)
+
 
 @bp.route('/contact/')
 def contact():

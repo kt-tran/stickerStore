@@ -1,50 +1,34 @@
-
 {% extends 'base.html' %}
 
 {% block head %}
-    <div class="container my-5 text-center">
-            <h1>Flower Stickers</h1>
-        </div>
+<div class="container my-5 text-center">
+    <h1>Flower stickers</h1>
 {% endblock %}
 
 {% block main %}
-<!--cards laid out in 3 columns-->
 <div class="container mb-5">
     <div class="row mb-5">
-        <div class="col col-lg-4">
-            <div class="card" style="width: 20rem;">
-                <a href={{ url_for('main.sticker_listing') }} class="text-decoration-none text-reset">
-                    <img src={{url_for('static', filename='images/stickers/flower_vase.png')}} class="card-img-top"
-                        alt="brown glass vase with four pink flowers inside">
+        <!-- each sticker is a bootstrap card -->
+        {% for sticker in stickers%}
+        <div class="col col-lg-4 my-3">
+            <a href={{ url_for('main.sticker_listing') }} class="text-decoration-none text-reset">
+                <div class="card">
+                    <img class="card-img-top" src="{{url_for('static', filename='img/stickers/'+sticker.image)}}"
+                        alt="{{ sticker.alt }}">
                     <div class="card-body">
-                        <h5 class="card-title">Feminine Flower Vase</h5>
-                        <p class="card-text pb-3">$1.99</p>
+                        <h5 class="card-title">{{sticker.name}}</h5>
+                        <p>
+                        <form action="{{ url_for('main.order') }}">
+                            <input type="hidden" id="sticker_id" name="sticker_id" value="{{ sticker.id }}">
+                            <input class="btn float-right d-inline-block" type="submit" value="Add to &#128722;"
+                                style="background-color: #CA8D89; border:#CA8D89">
+                        </form>
+                        </p>
+                        <p class="card-text pb-3">${{sticker.price}}</p>
                     </div>
-            </div>
+                </div>
         </div>
-        
-        <div class="col col-lg-4">
-            <div class="card" style="width: 20rem;">
-                <a href={{ url_for('main.sticker_listing') }} class="text-decoration-none text-reset">
-                    <img src="{{url_for('static', filename='images/stickers/hand_flower.png')}}" class="card-img-top"
-                        alt="black line drawing of a hand holding a rose">
-                    <div class="card-body">
-                        <h5 class="card-title">Line Rose</h5>
-                        <p class="card-text pb-3">$0.50</p>
-                    </div>
-            </div>
-        </div>
-
-        <div class="col col-lg-4">
-            <div class="card" style="width: 20rem;">
-                <a href={{ url_for('main.sticker_listing') }} class="text-decoration-none text-reset">
-                    <img src="{{url_for('static', filename='images/stickers/daisy.png')}}" class="card-img-top" alt="Drawn white daisy">
-                    <div class="card-body">
-                        <h5 class="card-title">White Daisy</h5>
-                        <p class="card-text pb-3">$0.40</p>
-                    </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
