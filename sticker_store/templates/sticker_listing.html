@@ -16,14 +16,15 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col">
-                        <h1>Sparkle Space Cat</h1>
+                        <h1>{{stickers.name}}</h1>
                         <h4>
-                            $0.99
-                            <form class="form-inline float-right">
+                            ${{stickers.price}}
+                            <form class="form-inline float-right" action="{{ url_for('main.order') }}">
                                 <div class="input-group">
                                     <input type="number" class="form-control" id="input1" placeholder="1"
                                         style="width:65px">
-                                    <button type="button" class="btn btn-secondary">Add To Cart</button>
+                                    <input type="hidden" id="sticker_id" name="sticker_id" value="{{ stickers.id }}">
+                                    <input class="btn btn-secondary float-right d-inline-block" type="submit" value="Add to Cart">
                                 </div>
                             </form>
                         </h4>
@@ -32,8 +33,8 @@
 
                 <div class="row">
                     <div class="col">
-                        <h5>Artist: NyanBeatz</h5>
-                        This funky cat sticker is the perfect addition to your notebook, laptop or moodboard. <br>
+                        <h5>Artist: {{artists.name}}</h5>
+                        {{stickers.description}} <br>
                     </div>
                 </div>
 
@@ -59,19 +60,19 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">Gloss</th>
-                                    <td>No</td>
+                                    <td>{{stickers.shiny}}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Matte</th>
-                                    <td>Yes</td>
+                                    <td>{{stickers.shiny}}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Holographic</th>
-                                    <td>Yes</td>
+                                    <td>True</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Puffy</th>
-                                    <td>No</td>
+                                    <td>{{stickers.puffy}}</td>
                                 </tr>
                             </tbody>
                         </table>

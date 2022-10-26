@@ -39,8 +39,9 @@ def artiststickers(artistid):
 
 @bp.route('/sticker/Space_Cat/')
 def sticker_listing():
-    stickers = Sticker.query.filter(Sticker.name == "Sparkle Space Cat")
-    return render_template('sticker_listing.html', stickers = stickers)
+    stickers = Sticker.query.filter(Sticker.name == 'Sparkle Space Cat').first()
+    artists =  Artist.query.filter_by(id=stickers.id).first()
+    return render_template('sticker_listing.html', stickers = stickers, artists = artists)
 
 @bp.route('/all_stickers/')
 def all_stickers():
