@@ -62,9 +62,9 @@
                 </ul>
 
                 <!-- search bar-->
-                <form class="form-inline my-2 my-lg-0">
+                <form class="form-inline my-2 my-lg-0" action="{{url_for('main.search')}}">
                     <input class="form-control mr-sm-2" type="search" placeholder="try 'cute penguin'"
-                        aria-label="Search">
+                        aria-label="Search" name="search">
                     <button class="btn my-2 my-sm-0" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                             height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 15 15">
                             <path
@@ -84,6 +84,16 @@
             </div>
         </nav>
         
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="alert alert-primary" role="alert">
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+            </div>
+        {% endif %}
+        {% endwith %}
+
         <!-- child content for head-->
         {% block head %}{% endblock %}
 

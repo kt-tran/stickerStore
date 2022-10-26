@@ -10,11 +10,11 @@ class Artist(db.Model):
     stickers = db.relationship('Sticker', backref='Artist', cascade="all, delete-orphan")
 
     def __repr__(self):
-        str = "Id: {}, Name: {}, Description: {}, Image: {}, Email: {}\n" 
+        str = "Id: {}, Name: {}, Description: {}, Image: {}, Email: {}\n"
         str =str.format( self.id, self.name,self.description,self.image,self.email)
         return str
 
-orderdetails = db.Table('orderdetails', 
+orderdetails = db.Table('orderdetails',
     db.Column('order_id', db.Integer,db.ForeignKey('orders.id'), nullable=False),
     db.Column('sticker_id',db.Integer,db.ForeignKey('stickers.id'),nullable=False),
     db.PrimaryKeyConstraint('order_id', 'sticker_id') )
@@ -33,10 +33,10 @@ class Sticker(db.Model):
     puffy = db.Column(db.Boolean)
     category = db.Column(db.String(64))
     alt = db.Column(db.String(64))
-    
+
     def __repr__(self):
-        str = "Id: {}, Name: {}, Description: {}, Image: {}, Price: {}, Artist: {}, Date: {}\n" 
-        str =str.format( self.id, self.name,self.description,self.image, self.price, self.artist_id, self.shiny, self.puffy)
+        str = "Id: {}, Name: {}, Description: {}, Image: {}, Price: {}, Artist: {}, Date: {}\n"
+        str = str.format(self.id, self.name,self.description,self.image, self.price, self.artist_id, self.shiny, self.puffy)
         return str
 
 class Order(db.Model):
@@ -50,8 +50,8 @@ class Order(db.Model):
     totalcost = db.Column(db.Float)
     date = db.Column(db.DateTime)
     stickers = db.relationship("Sticker", secondary=orderdetails, backref="orders")
-    
+
     def __repr__(self):
-        str = "id: {}, Status: {}, Firstname: {}, Surname: {}, Email: {}, Phone: {}, Date: {}, Stickers: {}, Total Cost: {}\n" 
+        str = "id: {}, Status: {}, Firstname: {}, Surname: {}, Email: {}, Phone: {}, Date: {}, Stickers: {}, Total Cost: {}\n"
         str =str.format( self.id, self.status,self.firstname,self.surname, self.email, self.phone, self.date, self.stickers, self.totalcost)
         return str

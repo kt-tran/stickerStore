@@ -61,53 +61,33 @@
         <img src="{{url_for('static', filename='img/fire_1f525.png')}}" style="height:30px;" class="pb-2">
     </h3>
 </div>
+
 <div class="container mb-5">
-    <div class="row">
-        <div class="col col-md-4 col-lg-4">
-            <div class="card" style="width: 20rem;">
-                <a href="{{ url_for('main.sticker_listing') }}" class="text-decoration-none text-reset">
-                    <img src={{url_for('static', filename='img/stickers/space_cat.png' )}} class="card-img-top"
-                        alt="sticker depicting purple cat as planet with sparkles surrounding it">
+    <div class="row mb-5">
+        <!-- each sticker is a bootstrap card -->
+        {% for sticker in stickers%}
+        <div class="col col-lg-4 my-3">
+            <a href={{ url_for('main.sticker_listing') }} class="text-decoration-none text-reset">
+                <div class="card">
+                    <img class="card-img-top" src="{{url_for('static', filename='img/stickers/'+sticker.image)}}"
+                        alt="{{ sticker.alt }}">
                     <div class="card-body">
-                        <h5 class="card-title">Sparkle Space Cat</h5>
-                        <p class="card-text pb-3">$0.99</p>
-                        <div class="d-flex justify-content-center">
-                            <a href="{{ url_for('main.animals') }}" class="btn btn-primary"
-                                style="background-color: #CA8D89; border:#CA8D89">More animals</a>
+                        <h5 class="card-title">{{sticker.name}}</h5>
+                        <p class="card-text pb-3">${{sticker.price}}</p>
+                        <form action="{{ url_for('main.order') }}">
+                            <input type="hidden" id="sticker_id" name="sticker_id" value="{{ sticker.id }}">
+                            <input class="btn float-right d-inline-block" type="submit" value="Add to &#128722;"
+                                style="background-color: #CA8D89; border:#CA8D89">
+                        </form>
+                        <div class="d-flex">
+                            <a href="{{url_for('main.all_stickers')}}" class="btn btn-primary"
+                                style="background-color: #CA8D89; border:#CA8D89">More</a>
                         </div>
                     </div>
-            </div>
+                </div>
+            </a>
         </div>
-        <div class="col col-md-4 col-lg-4">
-            <div class="card" style="width: 20rem;">
-                <a href="{{ url_for('main.sticker_listing') }}" class="text-decoration-none text-reset">
-                    <img src={{url_for('static', filename='img/stickers/chocolate_cake.png' )}} class="card-img-top"
-                        alt="circular small chocolate cake with single candle on top">
-                    <div class="card-body">
-                        <h5 class="card-title">Mini Chocolate Cake</h5>
-                        <p class="card-text pb-3">$0.50</p>
-                        <div class="d-flex justify-content-center">
-                            <a href="{{ url_for('main.food_drink') }}" class="btn btn-primary"
-                                style="background-color: #CA8D89; border:#CA8D89">More food</a>
-                        </div>
-                    </div>
-            </div>
-        </div>
-        <div class="col col-md-4 col-lg-4">
-            <div class="card" style="width: 20rem;">
-                <a href={{ url_for('main.sticker_listing') }} class="text-decoration-none text-reset">
-                    <img src={{url_for('static', filename='img/stickers/flower_vase.png' )}} class="card-img-top"
-                        alt="brown glass vase with four pink flowers inside">
-                    <div class="card-body">
-                        <h5 class="card-title">Feminine Flower Vase</h5>
-                        <p class="card-text pb-3">$1.99</p>
-                        <div class="d-flex justify-content-center">
-                            <a href="{{ url_for('main.flowers') }}" class="btn btn-primary"
-                                style="background-color: #CA8D89; border:#CA8D89">More flowers</a>
-                        </div>
-                    </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

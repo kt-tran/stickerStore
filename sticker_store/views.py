@@ -1,6 +1,6 @@
+from datetime import datetime
 from flask import Blueprint, render_template, url_for, request, session, flash, redirect
 from .models import Artist, Sticker, Order
-from datetime import datetime
 from .forms import CheckoutForm
 from . import db
 
@@ -9,7 +9,18 @@ bp = Blueprint('main', __name__)
 #homepage
 @bp.route('/')
 def index():
-    return render_template('index.html')
+    stickers = Sticker.query.filter(Sticker.id.between(0,3))
+    print (stickers)
+    return render_template('index.html', stickers = stickers)
+
+#search
+@bp.route('/sticker_search/')
+def search():
+    search = request.args.get('search')
+    search_copy = search
+    search = '%{}%'.format(search)
+    stickers = Sticker.query.filter(Sticker.name.like(search)).all()
+    return render_template('search.html', stickers = stickers, search_copy = search_copy)
 
 #return all artists
 @bp.route('/artists')
@@ -24,7 +35,7 @@ def artiststickers(artistid):
     artists =  Artist.query.filter_by(id=artistid).first()
     return render_template('artists_stickers.html', stickers = stickers, artists = artists.name)
 
-@bp.route('/sticker/1/')
+@bp.route('/sticker/Space_Cat/')
 def sticker_listing():
     stickers = Sticker.query.filter(Sticker.name == "Sparkle Space Cat")
     return render_template('sticker_listing.html', stickers = stickers)
