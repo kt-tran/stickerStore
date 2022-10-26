@@ -10,8 +10,10 @@ bp = Blueprint('main', __name__)
 @bp.route('/')
 def index():
     stickers = Sticker.query.filter(Sticker.id.between(0,3))
-    print (stickers)
-    return render_template('index.html', stickers = stickers)
+    if 'order_id' in session:
+        return render_template('index.html', stickers = stickers)
+    else:
+        return render_template('index_modal.html', stickers = stickers)
 
 #search
 @bp.route('/sticker_search/')
