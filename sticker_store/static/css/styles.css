@@ -11,9 +11,13 @@ img {
     font-size: 30px;
 }
 
-  .navbar-nav.navbar-center {
-            position: absolute;
-            left: 50%;
-            transform: translatex(-50%);
-        }
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
 
+.btn-default {
+    background-color: #CA8D89;
+    border:#CA8D89;
+}

@@ -133,16 +133,16 @@ def deleteorderitem():
 def deleteorder():
     if 'order_id' in session:
         del session['order_id']
-        flash('All items deleted')
+        flash('Your basket was emptied successfully.')
     return redirect(url_for('main.index'))
 
 
-@bp.route('/checkout', methods=['POST','GET'])
+@bp.route('/checkout/', methods=['POST','GET'])
 def checkout():
-    form = CheckoutForm() 
+    form = CheckoutForm()
     if 'order_id' in session:
         order = Order.query.get_or_404(session['order_id'])
-       
+
         if form.validate_on_submit():
             order.status = True
             order.firstname = form.firstname.data
@@ -157,7 +157,7 @@ def checkout():
             try:
                 db.session.commit()
                 del session['order_id']
-                flash('Thank you! One of our awesome team members will contact you soon...')
+                flash('Order completed. Thank you! The artists will be in touch soon.')
                 return redirect(url_for('main.index'))
             except:
                 return 'There was an issue completing your order :('
