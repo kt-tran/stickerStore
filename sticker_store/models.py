@@ -31,6 +31,7 @@ class Sticker(db.Model):
     #sizeLength = db.Column(db.Float(),)
     shiny = db.Column(db.Boolean)
     puffy = db.Column(db.Boolean)
+    #holographic = db.Column(db.Boolean)
     category = db.Column(db.String(64))
     alt = db.Column(db.String(64))
 

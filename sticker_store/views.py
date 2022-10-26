@@ -37,33 +37,40 @@ def artiststickers(artistid):
     artists =  Artist.query.filter_by(id=artistid).first()
     return render_template('artists_stickers.html', stickers = stickers, artists = artists.name)
 
+#return space cat sticker details page as an example
+#also passes corresponding stickers + artist row from database
 @bp.route('/sticker/Space_Cat/')
 def sticker_listing():
     stickers = Sticker.query.filter(Sticker.name == 'Sparkle Space Cat').first()
     artists =  Artist.query.filter_by(id=stickers.id).first()
     return render_template('sticker_listing.html', stickers = stickers, artists = artists)
 
+#returns all stickers
 @bp.route('/all_stickers/')
 def all_stickers():
     stickers = Sticker.query.all()
     return render_template('all_stickers.html', stickers = stickers)
 
+#returns stickers that are flower themed
 @bp.route('/flowers/')
 def flowers():
     stickers = Sticker.query.filter(Sticker.category == "Flower")
     return render_template('cat_flowers.html', stickers = stickers)
 
+#returns stickers that are animal themed
 @bp.route('/animals/')
 def animals():
     stickers = Sticker.query.filter(Sticker.category == "Animal")
     return render_template('cat_animals.html', stickers = stickers)
 
+#returns stickers that are food or drink themed
 @bp.route('/food_drink/')
 def food_drink():
     stickers = Sticker.query.filter(Sticker.category == "Food_Or_Drink")
     return render_template('cat_food_drink.html', stickers = stickers)
 
 
+#barebones contact page to demonstrate links in footer work
 @bp.route('/contact/')
 def contact():
     return render_template('contact.html')
@@ -139,7 +146,7 @@ def deleteorder():
         flash('Your basket was emptied successfully.')
     return redirect(url_for('main.index'))
 
-
+#Checkout
 @bp.route('/checkout/', methods=['POST','GET'])
 def checkout():
     form = CheckoutForm()
