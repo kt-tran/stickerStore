@@ -2,33 +2,33 @@
 
 {% block head %}
 <div class="container my-5 text-center">
-    <h1>Food & Drinks</h1>
-{% endblock %}
+    <h1>Food & Drink stickers</h1>
+    {% endblock %}
 
-{% block main %}
-<div class="container mb-5">
-    <div class="row mb-5">
-        <!-- each sticker is a bootstrap card -->
-        {% for sticker in stickers%}
-        <div class="col col-lg-4 my-3">
-            <a href={{ url_for('main.sticker_listing') }} class="text-decoration-none text-reset">
-                <div class="card">
-                    <img class="card-img-top" src="{{url_for('static', filename='img/stickers/'+sticker.image)}}"
-                        alt="{{ sticker.alt }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{sticker.name}}</h5>
-                        <p>
-                        <form action="{{ url_for('main.order') }}">
-                            <input type="hidden" id="sticker_id" name="sticker_id" value="{{ sticker.id }}">
-                            <input class="btn float-right d-inline-block" type="submit" value="Add to &#128722;"
-                                style="background-color: #CA8D89; border:#CA8D89">
-                        </form>
-                        </p>
-                        <p class="card-text pb-3">${{sticker.price}}</p>
+    {% block main %}
+    <div class="container mb-5">
+        <div class="row mb-5">
+            <!-- each sticker is a bootstrap card -->
+            {% for sticker in stickers%}
+            <div class="col col-lg-4 my-3">
+                <a href={{ url_for('main.sticker_listing') }} class="text-decoration-none text-reset">
+                    <div class="card">
+                        <img class="card-img-top" src="{{url_for('static', filename='img/stickers/'+sticker.image)}}"
+                            alt="{{ sticker.alt }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{sticker.name}}</h5>
+                            <p>
+                            <form action="{{ url_for('main.order') }}">
+                                <input type="hidden" id="sticker_id" name="sticker_id" value="{{ sticker.id }}">
+                                <input class="btn float-right d-inline-block" type="submit" value="Add to &#128722;"
+                                    style="background-color: #CA8D89; border:#CA8D89">
+                            </form>
+                            </p>
+                            <p class="card-text pb-3">${{sticker.price}}</p>
+                        </div>
                     </div>
-                </div>
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
-</div>
-{% endblock %}
+    {% endblock %}

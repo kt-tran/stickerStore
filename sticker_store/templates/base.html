@@ -11,7 +11,7 @@
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
     <!-- Custom CSS file -->
-    <link rel="stylesheet" type="text/css" href={{url_for( 'static', filename='css/styles.css' )}}>
+    <link rel="stylesheet" type="text/css" href={{url_for( 'static' , filename='css/styles.css' )}}>
 
     <!-- KalamFont for logo -->
     <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Kalam'>
@@ -25,7 +25,7 @@
     <title>Simply Stickers</title>
 
     <!-- Favicon in tab-->
-    <link rel="icon" type="image/x-icon" href={{url_for('static', filename='images/heart-fill.svg')}}>
+    <link rel="icon" type="image/x-icon" href={{url_for('static', filename='img/heart-fill.svg' )}}>
 
 </head>
 
@@ -63,8 +63,8 @@
 
                 <!-- search bar-->
                 <form class="form-inline my-2 my-lg-0" action="{{url_for('main.search')}}">
-                    <input class="form-control mr-sm-2" type="search" placeholder="try 'penguin'"
-                        aria-label="Search" name="search">
+                    <input class="form-control mr-sm-2" type="search" placeholder="try 'penguin'" aria-label="Search"
+                        name="search">
                     <button class="btn my-2 my-sm-0" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                             height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 15 15">
                             <path
@@ -74,7 +74,7 @@
                 </form>
 
                 <!-- cart button -->
-                <a class="btn ml-1 my-2 my-sm-0" href="{{url_for('main.order')}}"role="button">
+                <a class="btn ml-1 my-2 my-sm-0" href="{{url_for('main.order')}}" role="button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                         class="bi bi-cart" viewBox="0 0 16 16">
                         <path
@@ -83,14 +83,14 @@
                 </a>
             </div>
         </nav>
-        
+
         {% with messages = get_flashed_messages() %}
         {% if messages %}
-            <div class="alert alert-primary" role="alert">
+        <div class="alert alert-primary" role="alert">
             {% for message in messages %}
-                {{ message }}
+            {{ message }}
             {% endfor %}
-            </div>
+        </div>
         {% endif %}
         {% endwith %}
 
