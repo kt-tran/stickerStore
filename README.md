@@ -7,3 +7,6 @@ Assignment 1 & 2 - eCommerce website
 - Backend: Flask, SQLAlchemy
 
 Incomplete:
+- unable to access footer before dismissing modal button (GIF in bottom right corner) as footers are overlayed ontop of each other
+- personal artist pages
+- add multiple of one sticker/item to cart
