@@ -1,6 +1,6 @@
 # Sticker Store website
 
-IFN557 - Rapid Web Development (5 week course)
+*University Assignment* - Rapid Web Development (5 week course)
 
 Assignment 1 & 2 - eCommerce website
 - Front end: Bootstrap + CSS
