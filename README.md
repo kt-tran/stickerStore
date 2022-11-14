@@ -26,8 +26,7 @@
 <!-- PROJECT LOGO -->
 <div align="center">
   <a href="https://github.com/kt_tran/stickerStore">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
-  <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+  <img src="/img_README/cart4.svg">
 </svg>
   </a>
 
@@ -75,22 +74,26 @@ Overview:
 
 ### Welcome!
 ![welcome](/img_README/welcome_modal.gif)
+Welcome GIF button in overlaid footer that disappears upon return to homepage (i.e. if session in order) <br>
 
 ### Have a look around
-![browse](/img_README/browse_all.gif)
+![browse](/img_README/browse_all.gif) <br>
 
 ### Browse by category
 ![category](/img_README/navbar_categories.gif)
+Support an artist by buying more of their stickers, or build your animal sticker collection by browsing through the animal section.
 
 ### Want something specific?
-Search by title:
+Search for a sticker by title: <br>
 ![search](/img_README/search.gif)
 
-### Change your mind?
+### How to use the cart
 ![cart](/img_README/cart.gif)
 
 ### Ready to purchase?
 ![place_order](/img_README/verification_order.gif)
+Leave your details and we'll get back to you. <br>
+NOTE: order completion outlined by task requirements
 
 ### Incomplete:
 - unable to access footer before dismissing modal button (GIF in bottom right corner) as footers are overlayed ontop of each other
