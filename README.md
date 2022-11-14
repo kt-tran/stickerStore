@@ -1,11 +1,5 @@
 # Sticker Store website
 
-*University Assignment* - Rapid Web Development (5 week course)
-
-Assignment 1 & 2 - eCommerce website
-- Front end: Bootstrap + CSS
-- Backend: Flask, SQLAlchemy
-
 Features:
 - Home page
 - navbar + footer
