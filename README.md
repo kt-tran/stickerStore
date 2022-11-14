@@ -37,10 +37,12 @@ Incomplete:
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-![year][year-shield]
+<p> ![year][year-shield] </p>
+<p> 
 ![python][python-shield]
 [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-![css][css-shield]
+[![css][css-shield]][CSS-url]
+</p>
 
 
 <!-- PROJECT LOGO -->
@@ -160,6 +162,6 @@ in the cron table using:
 [year-shield]: https://img.shields.io/badge/Year-2022-blue
 [python-shield]: https://img.shields.io/badge/Flask-lightgrey
 [css-shield]: https://img.shields.io/badge/CSS-orange
+[CSS-url]: https://www.w3.org/TR/CSS/#css
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
-- category "more" buttons for item cards on homepage
