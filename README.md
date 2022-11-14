@@ -49,8 +49,7 @@ Incomplete:
 
 <h3 align="center">eCommerce Website</h3>
   <p align="center">
-    Rapid Web Development <br>
-    5-week university course
+    Rapid Web Development
   </p>
 </div>
 
@@ -63,7 +62,7 @@ Incomplete:
     <li>
       <a href="#about-the-project">About The Project</a>
     </li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#roadmap">Features</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -72,83 +71,41 @@ Incomplete:
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-<div align="center">
-    <img src="img/final.jpg" width="300" height="400" >
-</div>
+University assignment for a 5-week web development course using MVC.
 
-<div align="center">
-    <img src="img/green.jpg" width="300" height="400" >
-    <img src="img/both.jpg" width="300" height="400" >
-</div>
-
-Inspired by a picture of Darren Tarbard's Bin Day Cator, I decided to create one of my own after finding a mini plastic bin for $5 at the store.
-
-<div align="center">
-    <img src="img/bin_purchase.jpg" width="300" height="400" >
-</div>
-
-This is my first electronics-type project so I decided not to overcomplicate it. <br>
-We already have a Pi-hole set up and running at home so I thought to just run the bin program on the same Raspberry Pi as well. <br>
-You could probably set this up on an Ardunio (which is much cheaper) too, somehow. A good idea could be to set up smart home LED lights to turn corresponding colours on bin day as well if you already have that set up.
+Progression:
+Front end > Back end > Database
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ROADMAP -->
-## Roadmap
+<!-- Features -->
+## Features
 
-### Wiring
-![First Attempt][wiring-pic]
-My first attempt at preparing wires for soldering.
+### Welcome!
+![welcome](/img_README/welcome_modal.gif)
 
-![LED][LED-wire]
-After soldering and covering with heatshrink.
-I followed this tutorial: [here][led-tutorial]
+### Have a look around
+![browse](/img_README/browse_all.gif)
 
-### Connecting to the Pi
-<div align="center">
-    <img src="img/pi-pins.jpg" width="300" height="400" >
-</div>
+### Browse by category
+![category](/img_README/navbar_categories.gif)
 
-<br>Hard to see, so the diagram is probably better:
-![Pi GP-I/O][pi-diagram]
+### Want something specific?
+Search by title:
+![search](/img_README/search.gif)
 
-<div align="center">
-    <img src="img/pi_case.jpg" width="300" height="400" >
-</div>
-Unfortunately the case no longer fits over the top.
+### Change your mind?
+![cart](/img_README/cart.gif)
 
-### Inside the bin
-<div align="center">
-    <img src="img/inside_bin.jpg" width="300" height="400" >
-</div>
-I gave my sister my hot glue gun but a little bit of sticky tape was enough to fix the plush in place.
+### Ready to purchase?
+![place_order](/img_README/verification_order.gif)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- Cron -->
-## Using Cron
-
-Cron is an in-built Linux utility that allows you to schedule jobs to run periodically. <br> 
-Cron is used to run the python file on bin day each week. See: https://crontab.guru/
-
-Store this:
-  ```sh
-  0 0 * * 2 /usr/bin/python /home/pi/Documents/ledSimple.py
-  ```
-
-in the cron table using:
-  ```sh
-  crontab -e
-  ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* Idea: [Darren Tarbard](https://hackaday.com/2020/01/23/bindaycator-lets-you-know-when-to-take-out-the-trash/#:~:text=Having%20four%20LEDs%20both%20helps,segments%20in%20red%20and%20blue)
-* Contributor: [Jamie Gee](https://github.com/gouu1)
+QUT code snippets were provided & used throughout.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
