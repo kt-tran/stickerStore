@@ -50,7 +50,7 @@ Incomplete:
 <h3 align="center">eCommerce Website</h3>
   <p align="center">
     Rapid Web Development <br>
-    University 5-week Assignment
+    5-week university course
   </p>
 </div>
 
@@ -160,7 +160,7 @@ in the cron table using:
 [python-shield]: https://img.shields.io/badge/Flask-lightgrey
 [css-shield]: https://img.shields.io/badge/CSS-orange
 [CSS-url]: https://www.w3.org/TR/CSS/#css
-[SQLal-shield]: https://img.shields.io/badge/SQLAlchemy-red
-[SQLAl-url]: https://www.sqlalchemy.org/
+[sqlal-shield]: https://img.shields.io/badge/SQLAlchemy-red
+[sqlal-url]: https://www.sqlalchemy.org/
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
