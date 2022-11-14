@@ -18,6 +18,7 @@ Incomplete:
 - unable to access footer before dismissing modal button (GIF in bottom right corner) as footers are overlayed ontop of each other
 - personal artist pages
 - add multiple of one sticker/item to cart
+- category "more" buttons for item cards on homepage
 
 
 <a name="readme-top"></a>
@@ -161,3 +162,4 @@ in the cron table using:
 [css-shield]: https://img.shields.io/badge/CSS-orange
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
+- category "more" buttons for item cards on homepage
