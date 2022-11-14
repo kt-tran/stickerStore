@@ -18,4 +18,4 @@ Incomplete:
 - unable to access footer before dismissing modal button (GIF in bottom right corner) as footers are overlayed ontop of each other
 - personal artist pages
 - add multiple of one sticker/item to cart
-- buttons for item cards on homepage
+- category "more" buttons for item cards on homepage
