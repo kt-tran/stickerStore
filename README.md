@@ -1,20 +1,4 @@
 # Sticker Store website
-
-Features:
-- Home page
-- navbar + footer
-- cart + checkout (no user verification yet)
-- product details page (only one at the moment)
-- browse by category/artist
-- search by product name
-
-Incomplete:
-- unable to access footer before dismissing modal button (GIF in bottom right corner) as footers are overlayed ontop of each other
-- personal artist pages
-- add multiple of one sticker/item to cart
-- category "more" buttons for item cards on homepage
-
-
 <a name="readme-top"></a>
 <!--
 *** Readme template from: https://github.com/othneildrew/Best-README-Template/
@@ -34,7 +18,7 @@ Incomplete:
 ![year][year-shield] 
 ![python][python-shield]
 [![css][css-shield]][CSS-url]
-[![SQLAlchemy][sqlal-shield][sqlal-url]]
+[![SQLAlchemy][sqlal-shield]][sqlal-url]
 <br>
 [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 
@@ -73,8 +57,16 @@ Incomplete:
 ## About The Project
 University assignment for a 5-week web development course using MVC.
 
-Progression:
+Progression: <br>
 Front end > Back end > Database
+
+Overview:
+- Home page
+- navbar + footer
+- cart + checkout (no user verification yet)
+- product details page (only one at the moment)
+- browse by category/artist
+- search by product name
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -99,6 +91,12 @@ Search by title:
 
 ### Ready to purchase?
 ![place_order](/img_README/verification_order.gif)
+
+### Incomplete:
+- unable to access footer before dismissing modal button (GIF in bottom right corner) as footers are overlayed ontop of each other
+- personal artist pages
+- add multiple of one sticker/item to cart
+- category "more" buttons for item cards on homepage
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
