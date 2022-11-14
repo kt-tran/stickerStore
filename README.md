@@ -25,7 +25,7 @@
 
 <!-- PROJECT LOGO -->
 <div align="center">
-  <a href="https://github.com/kt_tran/stickerStore">
+  <a href="https://github.com/kt-tran/stickerStore">
   <img src="/img_README/cart4.svg">
 </svg>
   </a>
