@@ -26,7 +26,7 @@
 <!-- PROJECT LOGO -->
 <div align="center">
   <a href="https://github.com/kt-tran/stickerStore">
-  <img src="/img_README/cart4.svg">
+  <img src="/img_README/cart4.svg" width="200" height="200">
 </svg>
   </a>
 
