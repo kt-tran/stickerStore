@@ -37,12 +37,10 @@ Incomplete:
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-<p> ![year][year-shield] </p>
-<p> 
+![year][year-shield] <br>
 ![python][python-shield]
 [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 [![css][css-shield]][CSS-url]
-</p>
 
 
 <!-- PROJECT LOGO -->
